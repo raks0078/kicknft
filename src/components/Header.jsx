@@ -3,9 +3,13 @@ import "./Header.scss"
 class Header extends Component {
   render() {
     return (
-      <div>
-        Header....
-      </div>
+      <header>
+        <div className="container">
+          <div className="logo">
+            K
+          </div>
+        </div>
+      </header>
     )
   }
 }

@@ -1,13 +1,22 @@
+@font-face {
+  font-family: "Circular Std", Helvetica, Arial, sans-serif;
+  src: url(./fonts/Circular\ Std\ Font.otf);
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Circular Std", Helvetica, Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-weight: 600;
+  line-height: 1.38;
+  color: rgb(255, 255, 255);
+  background: rgb(18, 18, 18);
+  font-size: 15px;
+  max-width: 1600px;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 100%;
 }

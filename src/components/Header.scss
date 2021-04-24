@@ -1,0 +1,26 @@
+@import "../variables/variables.scss";
+
+header{
+    height: 84px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+
+    .container{
+        display: flex;
+
+        .logo{
+            background-color: $yellow_color;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $black_color;
+            font-size: 20px;
+            font-weight: 900;
+            margin-right: 24px;
+        }
+    }
+}
