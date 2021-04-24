@@ -22,5 +22,119 @@ header{
             font-weight: 900;
             margin-right: 24px;
         }
+        .content-right{
+            width: calc(100% - 64px);
+            display: flex;
+            align-items: center;
+
+            .search{
+                border: 1px solid transparent;
+                background: rgba(255, 255, 255, 0.07);
+                height: 38px;
+                padding: 0px 8px 0px 16px;
+                border-radius: 24px;
+                transition: all 0.12s ease-in-out 0s;
+                display: flex;
+                align-items: center;
+                margin-right: 24px;
+                width: 100%;
+
+                svg{
+                    color: rgba(255, 255, 255, 0.4);
+                    width: 20px;
+                }
+
+                .MuiAutocomplete-root{
+                    width: 100%;
+                    margin-left: 8px;
+                    display: flex;
+                    align-items: center;
+
+                    .MuiTextField-root{
+                        margin: 0;
+                        height: 100%;
+                        padding: 0;
+
+                        .MuiAutocomplete-inputRoot{
+                            height: 100%;
+                            padding: 0;
+
+                            input{
+                                color: rgba(255, 255, 255, 0.8);
+                                font-size: 15px;
+                                font-weight: 600;
+                                padding: 0;
+                            }
+
+                            fieldset{
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .search:hover{
+                border-color: rgba(255, 255, 255, 0.1);
+            }
+            .search:focus{
+                box-shadow: 0px 0px 4px rgba(255, 255, 255, .6);
+            }
+            .links{
+                display: flex;
+                width: 100%;
+                white-space: nowrap;
+                margin-right: 24px;
+            
+                ul{
+                    padding: 0;
+                    list-style: none;
+                    margin: 0;
+                    color: $grey_color;
+                    display: flex;
+
+                    li{
+                        margin-right: 20px;
+                        display: flex;
+                        align-items: center;
+
+                        svg{
+                            margin-left: 8px;
+                        }
+                    }
+                    li:last-child{
+                        margin-right: 0;
+                    }
+                }
+                .divider{
+                    height: 24px;
+                    width: 1px;
+                    background: rgba(255, 255, 255, 0.1);
+                    margin: 0px 18px;
+                }
+            }
+            .buttons{
+                display: flex;
+                white-space: nowrap;
+
+                .filled-button{
+                    background-color: $filled_button_background;
+                    color: $filled_button_color;
+                    border: 1px solid transparent;
+                    margin-right: 8px;
+                }
+                .filled-button:hover{
+                    background-color: $filled_button_background_hover;
+                    color: $filled_button_color_hover;
+                }
+                .stroked-button{
+                    background-color: transparent;
+                    color: $stroked_button_color;
+                    border: 1px solid $stroked_button_border;
+                }
+                .stroked-button:hover{
+                    border-color: $stroked_button_border_hover;
+                }
+            }
+        }
     }
 }
