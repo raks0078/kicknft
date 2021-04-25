@@ -11,11 +11,11 @@ import FormControl from "@material-ui/core/FormControl"
 import Select from "@material-ui/core/Select"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import "./Header.scss"
-const useStyles = withStyles((theme) => ({
+const styles = (theme) => ({
   typography: {
     padding: theme.spacing(2),
   },
-}))
+})
 
 class Header extends Component {
   constructor(props) {
@@ -99,6 +99,7 @@ class Header extends Component {
   }
   render() {
     const { data, open } = this.state
+    const { classes } = this.props
     return (
       <header>
         <div className="container">
@@ -195,7 +196,9 @@ class Header extends Component {
                       vertical: "top",
                       horizontal: "center",
                     }}
-                  />
+                  >
+                    <Typography className={classes.typography}>The content of the Popover.</Typography>
+                  </Popover>
                 </li>
               </ul>
             </div>
@@ -209,5 +212,4 @@ class Header extends Component {
     )
   }
 }
-
-export default Header
+export default withStyles(styles)(Header)
