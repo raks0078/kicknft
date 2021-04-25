@@ -12,6 +12,7 @@ class Explore extends Component {
       <div className="container">
         <div className="sections">
           <div className="main-cards">
+
             <a href="javascript:void(0)">
               <span>
                 <img src={house} />
@@ -21,6 +22,7 @@ class Explore extends Component {
                 </div>
               </span>
             </a>
+            
             <a href="javascript:void(0)">
               <span>
                 <img src={box2} />
