@@ -51,7 +51,7 @@ class Explore extends Component {
               <span>
                 <img src={cryptoart} />
                 <div className="content">
-                  <p>Rarible   <br/>weekly picks</p>
+                  <p>Rarible  <br/>weekly picks</p>
                   <small>by Vertical Cryptoart</small>
                 </div>
               </span>
