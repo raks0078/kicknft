@@ -42,3 +42,10 @@ button{
   font-size: 14px;
   transition: all 0.12s ease-in-out 0s;
 }
+.text-blue{
+  color: rgb(45, 129, 255);
+}
+.heading{
+  font-size: 30px;
+  line-height: 1.38;
+}

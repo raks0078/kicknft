@@ -1,3 +1,5 @@
+@import "../variables/variables.scss";
+
 .sections{
     padding-top: 32px;
     padding-bottom: 32px;
@@ -6,6 +8,7 @@
         display: flex;
         margin-left: -10px;
         margin-right: -10px;
+        margin-bottom: 20px;
 
         a{
             position: relative;
@@ -41,12 +44,12 @@
                     p{
                         font-size: 18px;
                         margin: 0;
-                        color: #fff;
+                        color: $white_color;
                         line-height: 1.4;
                     }
                     small{
                         font-size: 15px; 
-                        color: rgba(255, 255, 255, 0.5);
+                        color: $grey_color;
                         line-height: 1.4;
                         margin-top: 4px;
                         display: flex;
@@ -63,6 +66,34 @@
                 img{
                     transform: scale(1.1);
                     transition: all 0.12s ease-in-out 0s;
+                }
+            }
+        }
+    }
+    .top-sellers{
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+
+        .top-seller-content{
+            display: flex;
+            margin-left: -10px;
+            margin-right: -10px;
+
+            span{
+                position: relative;
+                height: 48px;
+                width: 20%;
+                padding-right: 10px;
+                padding-left: 10px;
+                display: flex;
+                align-items: center;
+
+                .counting{
+                    margin: 0px 16px;
+                    color: $grey_color;
+                    font-size: 14px;
+                    line-height: 19.32px;
                 }
             }
         }

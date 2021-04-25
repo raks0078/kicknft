@@ -57,6 +57,16 @@ class Explore extends Component {
               </span>
             </a>
           </div>
+          <div className="top-sellers">
+            <h1 className="heading">Top 
+            <span className="text-blue"> sellers</span> in 1 
+            <span className="text-blue"> day</span></h1>
+            <div className="top-seller-content">
+              <span>
+                <div className="counting">1</div>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     )

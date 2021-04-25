@@ -40,7 +40,7 @@ header{
                 width: 100%;
 
                 svg{
-                    color: rgba(255, 255, 255, 0.4);
+                    color: $light_grey_color;
                     width: 20px;
                 }
 
@@ -60,7 +60,7 @@ header{
                             padding: 0;
 
                             input{
-                                color: rgba(255, 255, 255, 0.8);
+                                color: $slight_grey_color;
                                 font-size: 15px;
                                 font-weight: 600;
                                 padding: 0;
