@@ -65,7 +65,16 @@ class Explore extends Component {
           </div>
           <div className="top-sellers">
             <h1 className="heading">Top 
-            <span className="text-blue"> sellers</span> in 1 
+              <div className="dropdown">
+                <a className="text-blue" id="sellers" data-bs-toggle="dropdown" aria-expanded="false">&nbsp;sellers
+                <svg viewBox="0 0 11 7" fill="none" width="13" height="13" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.00146 6.41431L9.70857 1.7072C10.0991 1.31668 10.0991 0.683511 9.70857 0.292986C9.31805 -0.097538 8.68488 -0.097538 8.29436 0.292986L5.00146 3.58588L1.70857 0.292986C1.31805 -0.097538 0.684882 -0.097538 0.294358 0.292986C-0.0961662 0.68351 -0.0961662 1.31668 0.294358 1.7072L5.00146 6.41431Z" fill="currentColor"></path></svg>
+                &nbsp;</a>
+                <ul class="dropdown-menu" aria-labelledby="community">
+                  <li><a class="dropdown-item" href="#">RARI Token</a></li>
+                  <li><a class="dropdown-item" href="#">Discussion</a></li>
+                </ul>
+            </div>
+             in 1 
             <span className="text-blue"> day</span></h1>
             <div className="top-seller-content">
               <span>
