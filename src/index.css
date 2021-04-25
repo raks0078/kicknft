@@ -49,3 +49,12 @@ button{
   font-size: 30px;
   line-height: 1.38;
 }
+.MuiAutocomplete-paper{
+  background-color: rgb(31, 31, 31) !important;
+  color: rgb(255, 255, 255) !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 16px 0px !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}

@@ -4,6 +4,7 @@ import box2 from "../images/main-cards/box2.png"
 import nominee from "../images/main-cards/nominee.png"
 import jeep from "../images/main-cards/jeep.png"
 import cryptoart from "../images/main-cards/featured-vertical-cryptoart.png"
+import profile from "../images/top-sellers/image.jpg"
 import "./Explore.scss"
 class Explore extends Component {
   render() {
@@ -51,7 +52,7 @@ class Explore extends Component {
               <span>
                 <img src={cryptoart} />
                 <div className="content">
-                  <p>Rarible  <br/>weekly picks</p>
+                  <p>Rarible <br/>weekly picks</p>
                   <small>by Vertical Cryptoart</small>
                 </div>
               </span>
@@ -64,6 +65,7 @@ class Explore extends Component {
             <div className="top-seller-content">
               <span>
                 <div className="counting">1</div>
+                <img src={} />
               </span>
             </div>
           </div>
