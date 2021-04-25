@@ -2,17 +2,27 @@ import React, { Component } from "react"
 import TextField from "@material-ui/core/TextField"
 import Autocomplete from "@material-ui/lab/Autocomplete"
 import TwitterIcon from "@material-ui/icons/Twitter"
-
+import Popover from "@material-ui/core/Popover"
+import Typography from "@material-ui/core/Typography"
+import Button from "@material-ui/core/Button"
+import { withStyles } from "@material-ui/core/styles"
 import MenuItem from "@material-ui/core/MenuItem"
 import FormControl from "@material-ui/core/FormControl"
 import Select from "@material-ui/core/Select"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import "./Header.scss"
+const useStyles = withStyles((theme) => ({
+  typography: {
+    padding: theme.spacing(2),
+  },
+}))
+
 class Header extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
+      anchorEl: false,
       top100Films: [
         { title: "The Shawshank Redemption", year: 1994 },
         { title: "The Godfather", year: 1972 },
@@ -64,6 +74,7 @@ class Header extends Component {
         { id: 11, icon: <TwitterIcon /> },
       ],
       comunityVal: "",
+      open: false,
     }
   }
 
@@ -73,8 +84,21 @@ class Header extends Component {
     this.setState({ [name]: val }, () => console.log("value", this.state.expiration))
   }
 
+  setAnchorEl = (getValue) => {
+    this.setState({
+      anchorEl: getValue,
+      open: getValue,
+    })
+  }
+  handlePopOver = (e) => {
+    this.setAnchorEl(true)
+  }
+
+  handleClose = () => {
+    this.setAnchorEl(null)
+  }
   render() {
-    const { data } = this.state
+    const { data, open } = this.state
     return (
       <header>
         <div className="container">
@@ -118,7 +142,7 @@ class Header extends Component {
                   <a href="javascript:void(0)">How it works</a>
                 </li>
                 <li>
-                  <Select
+                  {/* <Select
                     disableUnderline
                     classes={{
                       root: "select-root",
@@ -127,7 +151,7 @@ class Header extends Component {
                     value={this.state.comunityVal}
                     onChange={this.handleDropdownChange}
                     inputProps={{
-                      name: `expiration`,
+                      name: `comunityVal`,
                     }}
                     IconComponent={ExpandMoreIcon}
                     MenuProps={{
@@ -149,16 +173,29 @@ class Header extends Component {
                     </MenuItem>
 
                     {data.map((option) => (
-                      <>
-                        <MenuItem key={option.id} classes={{ root: "dropdown-item" }} value={option.label}>
-                          {option.label}
-                        </MenuItem>
-                        <MenuItem key={option.id} classes={{ root: "dropdown-item" }} value={option.label}>
-                          {option.icon}
-                        </MenuItem>
-                      </>
+                      <MenuItem key={option.id} classes={{ root: "dropdown-item" }} value={option.label}>
+                        {option.label}
+                        {option.icon}
+                      </MenuItem>
                     ))}
-                  </Select>
+                  </Select> */}
+                  <Button aria-describedby="simple-popover" variant="contained" color="primary" onClick={(e) => this.handlePopOver(e)}>
+                    Comunity
+                  </Button>
+                  <Popover
+                    id="simple-popover"
+                    open={open}
+                    anchorEl={this.state.anchorEl}
+                    onClose={this.handleClose}
+                    anchorOrigin={{
+                      vertical: "bottom",
+                      horizontal: "center",
+                    }}
+                    transformOrigin={{
+                      vertical: "top",
+                      horizontal: "center",
+                    }}
+                  />
                 </li>
               </ul>
             </div>
