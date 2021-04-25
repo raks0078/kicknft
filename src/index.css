@@ -45,9 +45,14 @@ button{
 .text-blue{
   color: rgb(45, 129, 255);
 }
+.text-white{
+  color: #ffffff;
+}
 .heading{
   font-size: 30px;
   line-height: 1.38;
+  margin-top: 18px;
+  margin-bottom: 30px;
 }
 .MuiAutocomplete-paper{
   background-color: rgb(31, 31, 31) !important;
