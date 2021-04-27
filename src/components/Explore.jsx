@@ -976,8 +976,12 @@ class Explore extends Component {
           </div>
           <hr />
           <div className="explore">
-            <h1 className="heading">Explore ⚡
-              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <h1 className="heading">
+              Explore ⚡
+              <ul className="nav nav-pills mb-3 nav-pills-explore" id="pills-tab" role="tablist">
+                <li class="nav-item-btn">
+                  <span></span>
+                </li>
                 <li class="nav-item" role="presentation">
                   <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
                 </li>
@@ -1008,13 +1012,2453 @@ class Explore extends Component {
                 <li class="nav-item" role="presentation">
                   <button class="nav-link" id="pills-punks-tab" data-bs-toggle="pill" data-bs-target="#pills-punks" type="button" role="tab" aria-controls="pills-punks" aria-selected="false">🤘 Punks</button>
                 </li>
+                <li class="nav-item-btn">
+                  <span></span>
+                </li>
               </ul>
-              <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">...</div>
-                <div class="tab-pane fade" id="pills-art" role="tabpanel" aria-labelledby="pills-art-tab">...</div>
-                <div class="tab-pane fade" id="pills-photography" role="tabpanel" aria-labelledby="pills-photography-tab">...</div>
-              </div>
+              <ul className="nav nav-pills mb-3 nav-pills-filter">
+                <li class="nav-item dropdown" role="presentation">
+                  <button class="nav-link" id="filter" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" width="22" height="22" xlmns="http://www.w3.org/2000/svg"><path d="M20 16L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6 16L4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M20 8L18 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 8L4 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="9" cy="16" r="3" fill="currentColor"></circle><circle cx="15" cy="8" r="3" fill="currentColor"></circle></svg>
+                    Filter & Sort
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="filter">
+                    <li>
+                      <a class="dropdown-item-disabled">Sort by</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        Recently added
+                        <svg viewBox="0 0 14 11" fill="none" width="12" height="12" xlmns="http://www.w3.org/2000/svg"><path d="M1 5L5 9L13 1" stroke="rgba(45, 129, 255, 1)" stroke-width="2" stroke-linecap="round"></path></svg>
+                      </a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Cheapest</a></li>
+                    <li><a class="dropdown-item" href="#">Highest price</a></li>
+                    <li><a class="dropdown-item" href="#">Most liked</a></li>
+                    <li><a class="dropdown-item-disabled">Options</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        Verified only
+                        <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="verified" />
+                      </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </h1>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+                <div className="explore-content">
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardone} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">0.95 ETH</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardtwo} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">0.95 ETH</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardthree} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">0.95 ETH</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfour} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">0.95 ETH</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfive} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">0.95 ETH</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                </div>
+                <div className="explore-content">
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardone} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">0.95 ETH</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardtwo} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">0.95 ETH</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardthree} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">0.95 ETH</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfour} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">0.95 ETH</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfive} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">0.95 ETH</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                </div>
+                <div className="explore-content">
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardone} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardtwo} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardthree} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfour} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfive} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                </div>
+                </div>
+                <div class="tab-pane fade" id="pills-art" role="tabpanel" aria-labelledby="pills-art-tab">
+                <div className="explore-content">
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardone} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardtwo} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardthree} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfour} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfive} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                </div>
+                <div className="explore-content">
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardone} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardtwo} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardthree} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfour} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfive} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                </div>
+                <div className="explore-content">
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardone} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardtwo} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardthree} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfour} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfive} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                </div>
+                </div>
+                <div class="tab-pane fade" id="pills-photography" role="tabpanel" aria-labelledby="pills-photography-tab">
+                <div className="explore-content">
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardone} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardtwo} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardthree} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfour} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfive} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                </div>
+                <div className="explore-content">
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardone} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardtwo} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardthree} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfour} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfive} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                </div>
+                <div className="explore-content">
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardone} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardtwo} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardthree} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfour} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                      <div className="main-tag">
+                <span>
+                  <div className="head-content">
+                    <div className="head-left">
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                      </div>
+                      <div className="small-img">
+                        <a href="javascript:void(0)">K</a>
+                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z" fill="#feda03"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z" fill="#000000"></path></svg>
+                      </div>
+                    </div>
+                    <div className="head-right dropdown">
+                      <button id="more" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg viewBox="0 0 14 4" fill="none" width="14" height="14" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path></svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="more">
+                        <li>
+                          <a class="dropdown-item" href="#">Place a bid</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">View on OpenSea</a></li>
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Report</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" className="body-content">
+                    <img src={hotbidcardfive} />
+                  </a>
+                  <div className="foot-content">
+                    <a href="javascript:void(0)">Bad Flavour</a>
+                    <div className="foot-small-content">
+                      <div className="foot-left">
+                        <p>
+                          <div className="text-white">Not for sale</div>
+                          1 of 1
+                        </p>
+                        <small>
+                          Bid 
+                          <div className="text-blue">1.25 WETH</div>
+                        </small>
+                      </div>
+                      <a href="javascript:void(0)" className="foot-right">
+                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16" xlmns="http://www.w3.org/2000/svg"><path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="rgba(255, 255, 255, 1)" stroke-width="2"></path></svg>
+                        61
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                </div>
+                </div>
+              </div>
           </div>
         </div>
       </div>
