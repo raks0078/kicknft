@@ -81,7 +81,6 @@ button{
   border: 1px solid rgba(255, 255, 255, 0.1);
   top: 100% !important;
   transform: none !important;
-  width: 270px;
   right: 0 !important;
   left: auto !important;
   padding: 12px;
@@ -97,4 +96,43 @@ button{
     font-size: 14px;
     line-height: 19.32px;
     font-weight: 600;
+}
+.dropdown-menu li:hover a, 
+.dropdown-menu li a:hover, 
+.dropdown-menu li a:focus, 
+.dropdown-menu li a:active{
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+.carousel .carousel-control-prev{
+      height: 47px;
+      width: 47px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      top: 46%;
+      left: -23px;
+      background-color: rgb(18, 18, 18);
+      opacity: 1;
+}
+.carousel-control-prev-icon{
+      width: 15px;
+      height: 15px;
+}
+.carousel-control-next{
+      height: 47px;
+      width: 47px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      top: 46%;
+      right: -23px;
+      background-color: rgb(18, 18, 18);
+      opacity: 1;
+}
+.carousel-control-next-icon{
+      width: 15px;
+      height: 15px;
+}
+.carousel .carousel-control-prev:hover, 
+.carousel .carousel-control-next:hover{
+  border-color: rgba(255, 255, 255, 0.18);
 }

@@ -143,6 +143,16 @@
                 margin-bottom: 0;
             }
         }
+        .dropdown{
+            .dropdown-menu{
+                a{
+                    justify-content: space-between;
+                    display: flex;
+                    align-items: center;
+
+                }
+            }
+        }
     }
     .hot-bids{
         display: flex;
@@ -307,6 +317,11 @@
                 }
             }
         }
+        .dropdown{
+            svg{
+                margin-left: 0;
+            }
+        }
     }
     .hot-collections{
         display: flex;
@@ -393,6 +408,39 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    hr{
+        background-color: rgba(255, 255, 255, 0.1);
+        margin-top: 32px;
+        margin-bottom: 0;
+        opacity: 1;
+    }
+    .explore{
+        display: flex;
+        margin-bottom: 20px;
+        flex-direction: column;
+
+        .nav-pills{
+            display: inline-flex;
+            margin-left: 16px;
+
+            .nav-link{
+                background: rgb(18, 18, 18);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                line-height: 16px;
+                color: $white_color;
+                height: 40px;
+                padding-left: 22px;
+                padding-right: 22px;
+                font-size: 14px;
+                border-radius: 40px;
+                margin-right: 12px;
+            }
+            .nav-link.active{
+                color: rgb(18, 18, 18);
+                background: rgb(255, 255, 255);
             }
         }
     }

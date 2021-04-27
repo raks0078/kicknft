@@ -93,6 +93,8 @@ header{
                         }
                         .dropdown{
                             .dropdown-menu{
+                                width: 270px;
+
                                 li{
                                     margin: 0;
                                     
@@ -116,11 +118,6 @@ header{
                                     a:hover{
                                         background-color: transparent;
                                         color: $slight_grey_color;
-                                    }
-                                }
-                                li:hover{
-                                    a{
-                                        background-color: rgba(255, 255, 255, 0.05);
                                     }
                                 }
                                 .inline-links:hover{
